@@ -61,6 +61,7 @@ const CartPage = () => {
                     alt={item.name}
                     width={100}
                     height={100}
+                    style={{ width: "auto", height: "auto" }}
                     className="object-cover"
                   />
                   <div className="ml-4">

@@ -16,6 +16,7 @@ const Card = ({ product }) => {
             alt={product.name}
             width={500}
             height={500}
+            style={{ width: "auto", height: "auto" }}
             className="object-cover"
           />
         </figure>

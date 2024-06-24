@@ -28,6 +28,7 @@ const SingleProductPage = ({ product, imageUrl }) => {
             alt={product.name}
             width={500}
             height={500}
+            style={{ width: "auto", height: "auto" }}
             className="object-cover"
           />
         </div>

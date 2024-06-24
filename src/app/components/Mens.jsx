@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';  // Make sure the import path is correct
-import { client } from '../../sanity/lib/client';
+import { client } from '../../../sanity/lib/client';
 
 
 const MensProducts = async () => {

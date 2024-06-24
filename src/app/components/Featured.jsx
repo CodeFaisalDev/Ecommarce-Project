@@ -1,5 +1,5 @@
 import React from "react";
-import { client, urlFor } from "../../sanity/lib/client";
+import { client, urlFor } from "../../../sanity/lib/client";
 import Image from "next/image";
 import Link from "next/link";
 

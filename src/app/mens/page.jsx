@@ -1,5 +1,5 @@
 import React from 'react'
-import MensProducts from '@/components/Mens'
+import MensProducts from '@/app/components/Mens'
 
 const page = () => {
   return (

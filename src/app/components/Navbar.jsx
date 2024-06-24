@@ -32,6 +32,8 @@ const Navbar = async () => {
   const { userId } = auth();
   const user = await currentUser()
 
+  // console.log(userId);
+  // console.log(user);
 
   if(user) {
     UpdateUserToDB(user);

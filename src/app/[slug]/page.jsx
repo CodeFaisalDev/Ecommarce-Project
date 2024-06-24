@@ -1,5 +1,5 @@
 import React from "react";
-import SingleProduct from "@/components/SingleProduct";
+import SingleProduct from "@/app/components/SingleProduct";
 
 const Page = (props) => {
   return <SingleProduct {...props} />;

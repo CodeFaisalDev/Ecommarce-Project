@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Link from "next/link";
-import Toast from "@/components/Toast";
+import Toast from "@/app/components/Toast";
 
 const CartPage = () => {
   const { cart, removeFromCart, clearCart } = useCart();

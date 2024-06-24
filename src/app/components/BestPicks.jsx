@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card";
-import { client } from "../../sanity/lib/client";
+import { client } from "../../../sanity/lib/client";
 
 
 const BestPicks = async () => {

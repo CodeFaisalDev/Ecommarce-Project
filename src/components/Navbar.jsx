@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link";
 import { FiShoppingCart } from "react-icons/fi";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../app/context/CartContext";
 // import { FiUser } from "react-icons/fi";
 // import { auth, currentUser } from "@clerk/nextjs/server";
 // import { useUser } from "@clerk/nextjs";

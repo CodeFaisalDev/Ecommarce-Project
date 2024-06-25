@@ -1,7 +1,9 @@
+"use client"
 import Link from "next/link";
 import { FiShoppingCart } from "react-icons/fi";
 import { FiUser } from "react-icons/fi";
-import { auth, currentUser } from "@clerk/nextjs/server";
+// import { auth, currentUser } from "@clerk/nextjs/server";
+import { useUser } from "@clerk/nextjs";
 import { UserButton } from "@clerk/nextjs";
 
 const UpdateUserToDB = async (user) => {
@@ -28,9 +30,13 @@ const UpdateUserToDB = async (user) => {
 }
 
 
-const Navbar = async () => {
-  const { userId } = auth();
-  const user = await currentUser()
+const Navbar = () => {
+  const { user } = useUser();
+  
+  // console.log("User", user);
+
+  // const { userId } = auth();
+  // const user = await currentUser()
 
   // console.log(userId);
   // console.log(user);
@@ -116,7 +122,7 @@ const Navbar = async () => {
             </Link>
           </button>
 
-          {userId ? (
+          {user ? (
             <UserButton />
           ) : (
             <button className="btn relative ml-2">

@@ -1,8 +1,8 @@
-import Featured from "@/app/components/Featured";
-import Hero from "@/app/components/Hero";
-import NewArivalSlide from "@/app/components/NewArivalSlide";
-import BestPicks from "@/app/components/BestPicks";
-import Footer from "@/app/components/Footer";
+import Featured from "@/components/Featured";
+import Hero from "@/components/Hero";
+import NewArivalSlide from "@/components/NewArivalSlide";
+import BestPicks from "@/components/BestPicks";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (

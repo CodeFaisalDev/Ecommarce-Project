@@ -1,8 +1,9 @@
 import { Inter } from "next/font/google";
 import { CartProvider } from "./context/CartContext";
 import "./globals.css";
-import Navbar from "@/app/components/Navbar";
+import Navbar from "@/components/Navbar";
 import { ClerkProvider } from "@clerk/nextjs";
+// import { SessionProvider } from "next-auth/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,14 +15,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
-      <html lang="en">
+    <html lang="en">
+      {/* <SessionProvider> */}
         <body className={inter.className}>
           <CartProvider>
             <Navbar />
             {children}
           </CartProvider>
         </body>
-      </html>
+      {/* </SessionProvider> */}
+    </html>
     </ClerkProvider>
   );
 }

@@ -87,20 +87,17 @@ const CartPage = () => {
               <button className="btn btn-warning my-2 mr-2" onClick={clearCart}>
                 Clear Cart
               </button>
-              <SignedIn>
-                <button
-                  className="btn btn-primary ml-2"
-                  onClick={handleCheckout}
-                >
-                  Proceed to Checkout
-                </button>
-              </SignedIn>
+              {/* <SignedIn> */}
+              <button className="btn btn-primary ml-2" onClick={handleCheckout}>
+                Proceed to Checkout
+              </button>
+              {/* </SignedIn> */}
 
-              <SignedOut>
+              {/* <SignedOut>
                 <button className="btn btn-primary ml-2">
                   <Link href="/sign-in">Sign In To Checkout</Link>
                 </button>
-              </SignedOut>
+              </SignedOut> */}
             </div>
           </div>
         </div>

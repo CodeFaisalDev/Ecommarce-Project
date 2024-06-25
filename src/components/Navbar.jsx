@@ -1,49 +1,46 @@
-"use client"
+// "use client"
 import Link from "next/link";
 import { FiShoppingCart } from "react-icons/fi";
-import { FiUser } from "react-icons/fi";
+// import { FiUser } from "react-icons/fi";
 // import { auth, currentUser } from "@clerk/nextjs/server";
-import { useUser } from "@clerk/nextjs";
-import { UserButton } from "@clerk/nextjs";
+// import { useUser } from "@clerk/nextjs";
+// import { UserButton } from "@clerk/nextjs";
 
-const UpdateUserToDB = async (user) => {
-  if(user) {
-    const baseUrl = process.env.NEXT_PUBLIC_URL
-    const response = await fetch(`${baseUrl}/api/users`, {
-      method: 'POST',
-      headers:{
-        'Content-Type' : 'application/json',
-      },
-      body: JSON.stringify({
-        userId: user.id,
-        firstName: user.firstName,
-        lastName: user.lastName,
-        email: user.emailAddresses[0].emailAddress,
-      }),
-    });
+// const UpdateUserToDB = async (user) => {
+//   if(user) {
+//     const baseUrl = process.env.NEXT_PUBLIC_URL
+//     const response = await fetch(`${baseUrl}/api/users`, {
+//       method: 'POST',
+//       headers:{
+//         'Content-Type' : 'application/json',
+//       },
+//       body: JSON.stringify({
+//         userId: user.id,
+//         firstName: user.firstName,
+//         lastName: user.lastName,
+//         email: user.emailAddresses[0].emailAddress,
+//       }),
+//     });
 
-    const data = await response.json();
-    if(!response.ok) {
-      console.error('Faild to sync user to db', data.error);
-    }
-  }
-}
+//     const data = await response.json();
+//     if(!response.ok) {
+//       console.error('Faild to sync user to db', data.error);
+//     }
+//   }
+// }
 
 
 const Navbar = () => {
-  const { user } = useUser();
+  // const { user } = useUser();
   
-  // console.log("User", user);
 
   // const { userId } = auth();
   // const user = await currentUser()
 
-  // console.log(userId);
-  // console.log(user);
 
-  if(user) {
-    UpdateUserToDB(user);
-  }
+  // if(user) {
+  //   UpdateUserToDB(user);
+  // }
 
   return (
     <div className=" sticky top-0 z-50 bg-white rounded-2xl flex flex-col items-center justify-between md:px-24">
@@ -122,7 +119,7 @@ const Navbar = () => {
             </Link>
           </button>
 
-          {user ? (
+          {/* {user ? (
             <UserButton />
           ) : (
             <button className="btn relative ml-2">
@@ -130,7 +127,7 @@ const Navbar = () => {
                 <FiUser size={24} />
               </Link>
             </button>
-          )}
+          )} */}
         </div>
       </div>
     </div>

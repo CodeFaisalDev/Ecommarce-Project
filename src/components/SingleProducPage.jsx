@@ -23,7 +23,7 @@ const SingleProductPage = ({ product, imageUrl }) => {
     <div className="flex flex-col items-center justify-items-center mx-4 md:mx-36 min-h-screen">
       <div className="flex flex-col md:flex-row w-full md:w-auto">
         <div className="w-full md:w-1/2 h-auto">
-          <div className="relative w-full h-0 pb-[75%]"> {/* Adjust ratio here */}
+          <div className="relative w-full h-0 pb-[75%] mt-10"> {/* Adjust ratio here */}
             <Image
               src={imageUrl}
               alt={product.name}

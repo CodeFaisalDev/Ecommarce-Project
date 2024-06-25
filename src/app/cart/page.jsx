@@ -56,14 +56,15 @@ const CartPage = () => {
                 className="flex justify-between items-center my-2"
               >
                 <div className="flex items-center">
-                  <Image
-                    src={item.imageUrl}
-                    alt={item.name}
-                    width={100}
-                    height={100}
-                    style={{ width: "auto", height: "auto" }}
-                    className="object-cover"
-                  />
+                  <div className="relative w-24 h-24">
+                    <Image
+                      src={item.imageUrl}
+                      alt={item.name}
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded"
+                    />
+                  </div>
                   <div className="ml-4">
                     <h2 className="text-xl">{item.name}</h2>
                     <p>${item.price}</p>

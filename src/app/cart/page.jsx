@@ -2,9 +2,9 @@
 import { useCart } from "../context/CartContext";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { SignedIn, SignedOut } from "@clerk/nextjs";
-import Link from "next/link";
-import Toast from "@/components/Toast";
+// import { SignedIn, SignedOut } from "@clerk/nextjs";
+// import Link from "next/link";
+// import Toast from "@/components/Toast";
 
 const CartPage = () => {
   const { cart, removeFromCart, clearCart } = useCart();

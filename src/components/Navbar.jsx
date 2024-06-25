@@ -1,6 +1,7 @@
-// "use client"
+"use client"
 import Link from "next/link";
 import { FiShoppingCart } from "react-icons/fi";
+import { useCart } from "../context/CartContext";
 // import { FiUser } from "react-icons/fi";
 // import { auth, currentUser } from "@clerk/nextjs/server";
 // import { useUser } from "@clerk/nextjs";
@@ -32,7 +33,8 @@ import { FiShoppingCart } from "react-icons/fi";
 
 const Navbar = () => {
   // const { user } = useUser();
-  
+  const { getTotalItems } = useCart();
+  const totalItems = getTotalItems();  
 
   // const { userId } = auth();
   // const user = await currentUser()
@@ -113,11 +115,16 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end relative">
-          <button className="btn relative mr-2">
+          <div className="relative mr-2">
             <Link href="/cart">
               <FiShoppingCart size={24} />
             </Link>
-          </button>
+            {totalItems > 0 && (
+              <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
+                {totalItems}
+              </span>
+            )}
+          </div>
 
           {/* {user ? (
             <UserButton />

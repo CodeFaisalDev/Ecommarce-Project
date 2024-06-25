@@ -53,7 +53,7 @@ const CartPage = () => {
             {cart.map((item) => (
               <li
                 key={item._id}
-                className="flex justify-between items-center my-2"
+                className="flex justify-between items-center my-4"
               >
                 <div className="flex items-center">
                   <div className="relative w-24 h-24">
